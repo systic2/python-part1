@@ -53,11 +53,11 @@ for i in scores:
     print(i)
 
 # 사용자로부터 입력을 받아서 리스트에 값을 저장하는 코드
-print("----------------------")
-nums = []
-for i in range(5):
-    nums.append(int(input("정수를 입력하세요 : ")))
-print(nums)
+# print("----------------------")
+# nums = []
+# for i in range(5):
+#     nums.append(int(input("정수를 입력하세요 : ")))
+# print(nums)
 
 # list 클래스(속성(멤버변수), 기능(멤버메서드), 생성자) 생성자를 이용한 리스트 만들기
 li1 = list()  # 매개변수가 없는 생성자 호출(붕어빵을 만드는 형태)
@@ -84,4 +84,7 @@ print("li2[0][0] : ", li2[2][0])
 print("li2[0][0] : ", li2[2][1])
 
 # 내장리스트 더블 루프로 출력하기
+for i in range(len(li2)):  # li2는 주소의 주소를 가지고 있다. len(li2) = 3 이다
+    for j in range(len(li2[i])):  # li2[0], li2[1], li2[2] 도 주소값을 지니고 있다.
+        print(li2[i][j])  # 2중 내장리스트는 li2[i][j] 은 변수와 동일하다
 
