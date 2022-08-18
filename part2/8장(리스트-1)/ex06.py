@@ -61,3 +61,15 @@ heros = ["스파이더맨", "배트맨", "슈퍼맨", "아이언맨", "헐크", 
 element = heros.clear()
 print(heros)
 print(heros)
+
+# 리스트에 포함된 요소의 갯수를 알고자 할 때, count() 를 이용하면 된다.
+heros = ["스파이더맨", "배트맨", "슈퍼맨", "아이언맨", "헐크", "태권V", "배트맨"]
+cnt = heros.count("배트맨")
+print(cnt)
+
+# extend(list 타입의 매개변수)는 리스트를 더하는 함수( += 와 동일한 효과)
+li1 = [1,2,3]
+li2 = [10.1, 20.2]
+# li1 += li2
+li1.extend(li2)
+print(li1)
