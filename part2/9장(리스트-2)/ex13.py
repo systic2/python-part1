@@ -11,7 +11,7 @@ def printList(li):
 def init(li):
     for row in range(len(li)):
         for col in range(len(li[row])):
-            if (row+col)%2 == 0:  #(row+col)이 짝수이면 1을 지정
+            if (row + col) % 2 == 0:  # (row+col)이 짝수이면 1을 지정
                 li[row][col] = 1
 
 
@@ -21,4 +21,3 @@ if __name__ == '__main__':
         table += [[0] * 10]
     init(table)
     printList(table)
-
