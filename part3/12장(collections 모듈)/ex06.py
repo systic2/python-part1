@@ -37,3 +37,5 @@ if __name__ == "__main__":
     print("------------------------------")
     dic = countLetters_defaultdict("가나다라마")
     print(dic.items())
+
+
