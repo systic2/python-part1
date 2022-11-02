@@ -39,4 +39,18 @@ P3 = P3._replace(gender="여")
 for n in [P1, P2, P3]:
     print("%s은(는) %d세의 %s성입니다." % n)
 
+# 생성된 Person 이라는 namedtuple 의 _fields 로써 Person 에 있는 필드명 tuple 형식으로 리턴해준다.
+print(P1._fields)
 
+# getattr() 는 필드명으로 그 값을 출력할 때 사용한다.
+print(getattr(P1, 'name'))
+print(getattr(P2, 'name'))
+print(getattr(P3, 'name'))
+
+# **(double-star-operator) 은 namedtuple() 딕셔너리 자료구조를 namedtuple() 변환하여 반환한다.
+dic = {'name': '신은비', 'age': 15, 'gender': '여'}
+print(dic)
+print(type(dic))
+
+P4 = Person(**dic)
+print("%s은(는) %d세의 %s성입니다." % (P4.name, P4.age, P4.gender,))
