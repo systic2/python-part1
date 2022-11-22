@@ -5,11 +5,14 @@ class Book:
         self.title = title
         self.author = author
         self.pages = pages
+
     def __str__(self):
         return '제목 : %s, 저자 : %s, 페이지수 : %d' % (self.title, self.author, self.pages)
+
     # len() 함수를 페이지수를 리턴하게끔 만듦
     def len(self):
         return self.pages
+
 
 if __name__ == "__main__":
     book = Book('파이썬', '코딩형', 874)
