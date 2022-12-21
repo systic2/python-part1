@@ -4,7 +4,7 @@ from tkinter import *
 
 window = Tk()
 # PhotoImage 클래스는 jpg 확장자를 지원을 하지 않는다.
-photo = PhotoImage(file="christmas.png")
+photo = PhotoImage(file="images/christmas.png")
 # 이미지가 들어가 있는 레이블은 윈도우의 우측에 배치
 lbl1 = Label(window, image=photo)
 # lbl1.photo = photo

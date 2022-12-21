@@ -4,7 +4,7 @@ from tkinter import *
 
 window = Tk()
 # 이미지 인스턴스를 생성하여 photo 변수에 저장
-photo = PhotoImage(file="korea.png")
+photo = PhotoImage(file="images/korea.png")
 lbl = Label(window, image=photo)
 # 이미지 객체를 레이블에서 참조를 얻는 것이다.
 # lbl.photo = photo
