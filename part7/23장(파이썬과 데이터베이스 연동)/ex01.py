@@ -16,7 +16,8 @@ cur = con.cursor()
 # 아래 코드는 테이블을 한 번 만들고 난 뒤 재차 실행시키면 테이블이 존재한다라는 에러를 발생시킨다.
 # 1번째 해결방법
 cur.execute("drop table if exists userTable")
-cur.execute("create table userTable(id char(4), userName char(15), email char(15), birthYear int)")
+# id 는 중복가능하면 안되는 컬럼이므로 PK로 설정한다.(중복 허용 방지, 자동정렬은 되지 않는다. -> 오라클이나 MySQL은 됨.)
+cur.execute("create table userTable(id char(4) primary key, userName char(15), email char(15), birthYear int)")
 # 아래 코드는 userTable 이라는 테이블이 존재하지 않는다면 생성하고 있다면 만들지 않고 에러를 발생시키지 않는다.
 # 2번째 해결방법
 # cur.execute("create table if not exists userTable(id char(4), userName char(15), email char(15), birthYear int)")
